@@ -2,9 +2,13 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
-import './temas-ts/01-tipos-bas.ts'
-import './temas-ts/02-interfaz-arre.ts'
-import './temas-ts/03-funciones.ts'
+//import './temas-ts/01-tipos-bas.ts'
+//import './temas-ts/02-interfaz-arre.ts'
+//import './temas-ts/03-funciones.ts'
+//import './temas-ts/04-desestructuracion-obj-arre.ts'
+//import './temas-ts/05-desestructuracion.funciones.ts'
+//import './temas-ts/06-import-export.ts'
+import './temas-ts/07-classe.ts'
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
