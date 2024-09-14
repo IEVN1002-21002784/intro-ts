@@ -1,41 +1,31 @@
-class Punto {
-    protected x: number;
-    protected y: number;
+class Coordenada {
+    private x1: number;
+    private y1: number;
+    private x2: number;
+    private y2: number;
+    private resultado: number;
 
-    constructor(x: number, y: number) {
-        this.x = x;
-        this.y = y;
+    constructor(inicioX: number, inicioY: number, finX: number, finY: number) {
+        this.x1 = inicioX;
+        this.y1 = inicioY;
+        this.x2 = finX;
+        this.y2 = finY;
+        this.resultado = 0;
     }
 
-    imprimir(): void {
-        console.log(`Las cordenadas del punto es : (${this.x}, ${this.y})`);
-    }
-}
-
-class PuntoConDistancia extends Punto {
-    constructor(x: number, y: number) {
-        super(x, y);
+    public calcularDistancia(): number {
+        const diferenciaX = this.x2 - this.x1;
+        const diferenciaY = this.y2 - this.y1;
+        this.resultado = Math.hypot(diferenciaX, diferenciaY); 
+        return this.resultado;
     }
 
-    static calcularDistancia(punto1: PuntoConDistancia, punto2: PuntoConDistancia): number {
-        const dx = punto2.x - punto1.x;
-        const dy = punto2.y - punto1.y;
-        return Math.sqrt(dx * dx + dy * dy);
-    }
-
-    imprimir(): void {
-        super.imprimir();
+    public imprimirDistancia(): void {
+        console.log(`Distancia entre los puntos: ${this.resultado.toFixed(2)}`);
     }
 }
 
 
-const punto1 = new PuntoConDistancia(1, 2);
-const punto2 = new PuntoConDistancia(2, 6);
-
-
-punto1.imprimir();
-punto2.imprimir();
-
-
-const distancia = PuntoConDistancia.calcularDistancia(punto1, punto2);
-console.log(`La distancia entre los puntos es: ${distancia.toFixed(2)}`);
+const coordenada = new Coordenada(-4, -3, 2, 5);
+coordenada.calcularDistancia();
+coordenada.imprimirDistancia();
