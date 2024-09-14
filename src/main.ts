@@ -8,7 +8,11 @@ import { setupCounter } from './counter.ts'
 //import './temas-ts/04-desestructuracion-obj-arre.ts'
 //import './temas-ts/05-desestructuracion.funciones.ts'
 //import './temas-ts/06-import-export.ts'
-import './temas-ts/07-classe.ts'
+//import './temas-ts/07-classe.ts'
+import './temas-ts/08-herencia.ts'
+import './temas-ts/distancia_entre_dospuntos.ts'
+import './temas-ts/triangulos.ts'
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
